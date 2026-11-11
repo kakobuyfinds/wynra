@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<title>Parcel Up spreadsheet – svensk guide till produktlänkar och QC</title>
+<meta name="description" content="Använd en Parcel Up spreadsheet för att jämföra produktlänkar, storlekar, QC-bilder och frakt till Sverige. Se shoppingkategorier hos CAFANS.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:title" content="Parcel Up spreadsheet – från produktlänk till paket">
+<meta property="og:description" content="Svensk guide till Taobao, storlekskontroll, lagerbilder och frakt till Sverige.">
+<!-- Bings första resultatsida gick inte att verifiera. Tillgängliga sökträffar och Parcel Ups hjälpsidor låg till grund för ämnesvalet. -->
+<!-- Sökordsunderlag
+Närliggande sökord: Parcel Up köpguide, Taobao-produktlänkar, QC-bilder, frakt till Sverige.
+Längre sökfraser: Parcel Up spreadsheet på svenska, skapa en inköpslista för Taobao, spara originaladressen till en produkt, hitta Taobao-varans produkt-ID, jämföra färgkoder och modellkoder, läsa säljarens storlekstabell, kontrollera innermått för sneakers, mäta bröstvidd på en huvtröja, jämföra axelbredd på jackor, kontrollera midjemått för shorts, granska QC-bilder från lagret, be om en bild på etiketten, kontrollera sömmar på lagerbilder, jämföra matchtröjans tryck, kontrollera returfristen före frakt, uppskatta internationell frakt till Sverige, räkna ut volymvikt för ett paket, jämföra faktisk vikt och volymvikt, beräkna inrikesfrakt i Kina, räkna om kostnaden till SEK, uppskatta importmoms vid köp från Kina, kontrollera transportörens hanteringsavgift.
+-->
+<style>
+:root{color-scheme:light;--paper:#f7f5f0;--ink:#27243a;--accent:#593783;--line:#ded7e7;--wash:#ede6f5}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.6 system-ui,sans-serif}
+a{color:var(--accent);text-underline-offset:.22em}
+a:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:4px}
+.wrap{width:min(70rem,calc(100% - 2rem));margin-inline:auto}
+header{border-bottom:1px solid var(--line)}
+header .wrap{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding-block:.9rem}
+.brand{font-weight:850;text-decoration:none}
+.hero{display:grid;grid-template-columns:1.2fr 1fr;align-items:center;gap:clamp(1rem,5vw,4rem);padding-block:clamp(1.5rem,5vw,4rem)}
+h1,h2,h3{line-height:1.15;margin:0 0 .55em}
+h1{font:700 clamp(2.65rem,7vw,5.4rem)/.98 Georgia,serif;letter-spacing:-.04em}
+h2{font:700 clamp(1.8rem,4vw,2.7rem)/1.1 Georgia,serif}
+p{margin:0 0 1em;max-width:66ch}
+figure{margin:0}
+img{display:block;width:100%;height:auto;background:var(--wash)}
+.hero img{aspect-ratio:4/3;object-fit:cover;border-radius:1rem}
+figcaption{font-size:.86rem;padding-top:.45rem}
+.band{background:var(--wash);padding-block:1.6rem}
+.categories{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.55rem;padding:0;margin:0;list-style:none}
+.categories a{display:flex;align-items:center;min-height:3rem;padding:.55rem .7rem;border:1px solid var(--line);border-radius:.55rem;background:#fff;font-weight:680;text-decoration:none}
+.categories a:hover{background:var(--accent);color:white}
+.section{padding-block:clamp(1.65rem,4vw,3rem)}
+.gallery,.articles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.gallery img{aspect-ratio:1;object-fit:cover;border-radius:.65rem}
+.articles{grid-template-columns:repeat(3,minmax(0,1fr))}
+article{border-top:3px solid var(--accent);padding:1rem;background:#fff}
+article p:last-child,figcaption p:last-child{margin-bottom:0}
+table{width:100%;border-collapse:collapse;text-align:left}
+caption{text-align:left;margin-bottom:.6rem}
+th,td{padding:.65rem .5rem;border-bottom:1px solid var(--line);vertical-align:top}
+thead{background:var(--wash)}
+details{border-bottom:1px solid var(--line);padding:.75rem 0}
+summary{cursor:pointer;font-weight:700}
+details p{margin:.55rem 0 0}
+footer{border-top:1px solid var(--line);padding-block:1.2rem}
+@media(max-width:780px){.categories{grid-template-columns:repeat(3,minmax(0,1fr))}.articles{grid-template-columns:1fr}}
+@media(max-width:560px){.hero{grid-template-columns:1fr}.categories,.gallery{grid-template-columns:repeat(2,minmax(0,1fr))}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@graph":[
+    {
+      "@type":"WebPage",
+      "name":"Parcel Up spreadsheet – svensk guide till produktlänkar och QC",
+      "description":"Använd en Parcel Up spreadsheet för att jämföra produktlänkar, storlekar, QC-bilder och frakt till Sverige. Se shoppingkategorier hos CAFANS.",
+      "inLanguage":"sv",
+      "about":["Produktlänkar","Kvalitetskontroll med lagerbilder","Frakt till Sverige"]
+    },
+    {
+      "@type":"FAQPage",
+      "inLanguage":"sv",
+      "mainEntity":[
+        {"@type":"Question","name":"Vad är en Parcel Up spreadsheet?","acceptedAnswer":{"@type":"Answer","text":"Det är ett kalkylblad där du kan samla produktlänkar, varianter, mått och anteckningar inför ett köp. Kategorilänkarna på den här sidan leder till CAFANS."}},
+        {"@type":"Question","name":"Vad kan jag kontrollera på QC-bilder?","acceptedAnswer":{"@type":"Answer","text":"Du kan granska synliga detaljer som färg, märkning och ytskador. Be om ett foto med måttband när storleken är viktig. Äkthet kräver separat dokumentation."}},
+        {"@type":"Question","name":"Hur uppskattar jag frakten till Sverige?","acceptedAnswer":{"@type":"Answer","text":"Ange destination, vikt och paketmått i fraktkalkylatorn. Kontrollera vilken vikt fraktalternativet debiterar och räkna med eventuella import- och hanteringskostnader."}},
+        {"@type":"Question","name":"Vad gör jag om en Taobao-länk har ändrats?","acceptedAnswer":{"@type":"Answer","text":"Kontrollera butikens namn, produkt-ID och variant mot dina anteckningar. Uppdatera kalkylbladet först när du har bekräftat att länken gäller rätt vara."}}
+      ]
+    }
+  ]
+}
+</script>
+<link rel="canonical" href="https://kakobuyfinds.github.io/wynra/">
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <a class="brand" href="https://www.cafans.com">www.cafans.com</a>
+    <a href="https://www.cafans.com">Öppna katalogen</a>
+  </div>
+</header>
+<main>
+  <section class="wrap hero" aria-labelledby="sidtitel">
+    <div>
+      <h1 id="sidtitel">Parcel Up spreadsheet</h1>
+      <p>Samla produktlänkar, mått och lagerbilder på samma rad. Med en tydlig inköpslista blir det enklare att jämföra rätt variant och uppskatta kostnaden för ett paket till Sverige.</p>
+      <p>Det här är en fristående svensk köpguide. Kategorierna nedan öppnar CAFANS.</p>
+    </div>
+    <figure>
+      <img src="https://cdn.tatlerasia.com/tatlerasia/i/2022/02/11172654-hero-shot-01_cover_1500x1494.jpg" alt="Louis Vuitton x Nike Air Force 1 i rutigt och monogrammönstrat material på en orange koffert" width="1500" height="1494" loading="eager" fetchpriority="high" decoding="async">
+      <figcaption>Stilreferens: Louis Vuitton × Nike Air Force 1.</figcaption>
+    </figure>
+  </section>
+
+  <nav class="band" aria-label="Produktkategorier hos CAFANS">
+    <div class="wrap">
+      <h2>Välj produktkategori</h2>
+      <ul class="categories">
+        <li><a href="https://cafans.com/category-911-Shoes.html">Skor</a></li>
+        <li><a href="https://cafans.com/category-912-Hoodies%2FSweaters.html">Huvtröjor och tröjor</a></li>
+        <li><a href="https://cafans.com/category-913-T-Shirts.html">T-shirts</a></li>
+        <li><a href="https://cafans.com/category-914-Jackets.html">Jackor</a></li>
+        <li><a href="https://cafans.com/category-915-Pants%2FShorts.html">Byxor och shorts</a></li>
+        <li><a href="https://cafans.com/category-916-Headwear.html">Huvudbonader</a></li>
+        <li><a href="https://cafans.com/category-917-Sets.html">Klädset</a></li>
+        <li><a href="https://cafans.com/category-918-underwear%2Funderpants.html">Underkläder</a></li>
+        <li><a href="https://cafans.com/category-919-Jersey.html">Matchtröjor</a></li>
+        <li><a href="https://cafans.com/category-920-Accessories.html">Accessoarer</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="wrap section" aria-labelledby="kolumner">
+    <h2 id="kolumner">Bygg din inköpslista</h2>
+    <table>
+      <caption>Fält att lägga in i din Parcel Up spreadsheet</caption>
+      <thead><tr><th scope="col">Kolumn</th><th scope="col">Vad du sparar</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Produktlänk</th><td>Originaladress, butik, produkt-ID och datum för senaste länkkontroll.</td></tr>
+        <tr><th scope="row">Variant</th><td>Modellkod, färgkod, storlek, antal och säljarens storlekstabell.</td></tr>
+        <tr><th scope="row">Mått</th><td>Innermått för sneakers, bröstvidd för huvtröjor, axelbredd för jackor eller midjemått för shorts.</td></tr>
+        <tr><th scope="row">QC</th><td>Lagerbilder, bild på etiketten, närbild på sömmarna och uppmätt längd.</td></tr>
+        <tr><th scope="row">Frakt</th><td>Emballage, paketmått, faktisk vikt, volymvikt och fraktalternativ till Sverige.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="band" aria-labelledby="bildreferenser">
+    <div class="wrap">
+      <h2 id="bildreferenser">Detaljer att jämföra</h2>
+      <p>Stilbilderna visar exempel på former och material. Kontrollera den enskilda produktannonsen för uppgifter om tillgänglighet.</p>
+      <div class="gallery">
+        <figure>
+          <img src="https://media.gucci.com/style/DarkGray_Center_0_0_1200x1200/1727974881/817492_4HBDV_1000_003_100_0000_Light-gg.jpg" alt="Svart Gucci-keps med böjd skärm och diskret GG-mönster" width="1200" height="1200" loading="lazy" decoding="async">
+          <figcaption>Gucci · skärmens form och huvudmått</figcaption>
+        </figure>
+        <figure>
+          <img src="https://assets.hermes.com/is/image/hermesproduct/en-roue-libre-scarf-90--003683S%2007-flat-1-300-0-1000-1000_g.jpg" alt="Röd Hermès En Roue Libre-scarf med grönt vagnshjul i mitten" width="1000" height="1000" loading="lazy" decoding="async">
+          <figcaption>Hermès · kant, mönster och material</figcaption>
+        </figure>
+        <figure>
+          <img src="https://diorama.dam-broadcast.com/cdn-cgi/image/width%3D3000%2Cformat%3Dauto/pm_11872_1326_1326768-760pf5t4nq-whr.jpg" alt="Mintgrön Dior-överdel med en knuten scarf i orange och pastell" width="600" height="600" loading="lazy" decoding="async">
+          <figcaption>Dior · krage, brodyr och färg</figcaption>
+        </figure>
+        <figure>
+          <img src="https://bordergara.com/cdn/shop/products/dr-2310-0012__1_800x.jpg?v=1697114162" alt="Dior-halsband med tigerhänge över en gul blommig överdel" width="800" height="800" loading="lazy" decoding="async">
+          <figcaption>Dior · hängets mått och kedjans längd</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="guider">
+    <h2 id="guider">Köpguider</h2>
+    <div class="articles">
+      <article>
+        <h3>Hitta tillbaka till rätt Taobao-vara</h3>
+        <p>Om en Taobao-produktlänk ändras, sök på produkt-ID och jämför butikens namn och bilder. Håll olika färger på egna rader när priset eller lagersaldot skiljer sig. Spara materialbeskrivningen och notera vilken storlek säljaren har bekräftat.</p>
+      </article>
+      <article>
+        <h3>Läs lagerbilder före godkännande</h3>
+        <p>Jämför bilderna från kvalitetskontrollen med din beställda variant. För en matchtröja kan du granska tryckets placering, och för skor kan du be om en närbild av sulan. Kontrollera returfristen när en avvikelse behöver utredas.</p>
+      </article>
+      <article>
+        <h3>Beräkna hela kostnaden till Sverige</h3>
+        <p>Skriv upp varupris, inrikesfrakt i Kina, eventuella agentavgifter och internationell frakt. Kontrollera vilka belopp som kan tillkomma för importmoms, eventuell tull och transportörens hantering. Räkna om till SEK med den växelkurs betalningen faktiskt använder.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="wrap section" aria-labelledby="fragor">
+    <h2 id="fragor">Vanliga frågor</h2>
+    <details open>
+      <summary>Vad är en Parcel Up spreadsheet?</summary>
+      <p>Det är ett kalkylblad där du kan samla produktlänkar, varianter, mått och anteckningar inför ett köp. Kategorilänkarna på den här sidan leder till CAFANS.</p>
+    </details>
+    <details>
+      <summary>Vad kan jag kontrollera på QC-bilder?</summary>
+      <p>Du kan granska synliga detaljer som färg, märkning och ytskador. Be om ett foto med måttband när storleken är viktig. Äkthet kräver separat dokumentation.</p>
+    </details>
+    <details>
+      <summary>Hur uppskattar jag frakten till Sverige?</summary>
+      <p>Ange destination, vikt och paketmått i fraktkalkylatorn. Kontrollera vilken vikt fraktalternativet debiterar och räkna med eventuella import- och hanteringskostnader.</p>
+    </details>
+    <details>
+      <summary>Vad gör jag om en Taobao-länk har ändrats?</summary>
+      <p>Kontrollera butikens namn, produkt-ID och variant mot dina anteckningar. Uppdatera kalkylbladet först när du har bekräftat att länken gäller rätt vara.</p>
+    </details>
+  </section>
+</main>
+<footer>
+  <div class="wrap"><a class="brand" href="https://www.cafans.com">www.cafans.com</a></div>
+</footer>
+</body>
+</html>
